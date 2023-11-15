@@ -1,0 +1,31 @@
+{
+  "name": "Diary.ru new comment cheker",
+  "description": "Расширение для хрома, информирующее о новых комментариях или умылах на сайте diary.ru",
+  "version": "0.231005",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_icon": {
+      "32": "images/gray32.png"
+    },
+    "default_title": "Diary.ru проверятор",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "32": "images/red32.png",
+    "128": "images/red128.png"
+  },
+    "permissions": [
+        "storage",
+		"alarms",
+		"nativeMessaging"
+    ],
+	"host_permissions": [
+    "*://diary.ru/*",
+    "*://just-the-time.appspot.com/*"
+	
+  ]
+}
