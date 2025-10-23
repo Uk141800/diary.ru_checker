@@ -1,11 +1,10 @@
 {
   "name": "Diary.ru new comment cheker",
-  "description": "Расширение для хрома, информирующее о новых комментариях или умылах на сайте diary.ru",
-  "version": "0.231005",
+  "description": "Расширение для хрома, информирующее о новых комментариях или умылах на сайте diary.space (ex. diary.ru)",
+  "version": "0.251021",
   "manifest_version": 3,
   "background": {
-    "service_worker": "worker.js",
-    "type": "module"
+    "service_worker": "worker.js"
   },
   "action": {
     "default_icon": {
@@ -18,14 +17,18 @@
     "32": "images/red32.png",
     "128": "images/red128.png"
   },
-    "permissions": [
-        "storage",
-		"alarms",
-		"nativeMessaging"
-    ],
-	"host_permissions": [
-    "*://diary.ru/*",
-    "*://just-the-time.appspot.com/*"
-	
+  "permissions": [
+    "storage",
+    "alarms",
+    "scripting",
+    "nativeMessaging",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.diary.space/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
   ]
 }

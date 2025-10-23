@@ -3,7 +3,6 @@
     <meta charset="utf-8">
   </head>
   <script type="module" src="popup.js"></script>
-  <script type="module" src="/module/icon.js"></script>
   <style>
     iframe {
       border: none;
@@ -15,10 +14,28 @@
   color: #0000EE;
 	}
   </style>
+
   <body>
     <div style="width:300px;padding:0;background-color:lightgray;">
 	  <div style='text-align: center;background-color:lightgray;padding:0;'>Diary.ru проверятор</div>
-	  <div id='text' style="padding:20 0 20 0;text-align: center;background-color:silver;">Проверяем.</div>
+	  <div style="padding:10 0 10 0;text-align: center;background-color:silver;"> <div id='text' >Проверяем.</div></div>
+
+    <div style="padding:10 0 10 0;text-align: center;background-color:silver;border-top-width: 1px;border-top: groove;">
+      <label class="switch">
+        <input type="checkbox" id="favFix">
+      </label>
+      <span>Избранное по центру.</span>
+      <br>
+      <label class="switch">
+        <input type="checkbox" id="mainfeedFix">
+      </label>
+      <span>Общая лента по центру.</span>
+      <br>
+      <label class="switch">
+        <input type="checkbox" id="avatarFix">
+      </label>
+      <span>Аватарки нормальные.</span>
+    </div>
 	  <div style="width:300px; text-align: center; background-color:lightgray; font-size:smaller; color:black; padding:0;"><a  target="_blank" rel="noopener noreferrer" href = 'http://uk141.ru'>UK141</a> made it. (c) <a  target="_blank" rel="noopener noreferrer" href = 'https://diaryruhelper.ru/'>diaryruhelper.ru</a></div>
 	</div>
   </body>
