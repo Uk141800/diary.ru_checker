@@ -49,8 +49,8 @@ async function refresh() {
 
     //Ищу комментарии вне днвеника
     const extcommentli = text.match(/<li id="discussionLink">(.*?)<\/li>/s);
-    console.log(extcommentli)
-    const extcomment = extcommentli[1].match(/<li id="discussionLink">.*?<div class="num adm-num"[^<]*?<a[^<]*?href="([^<]*?)"[^<]*?>([^<]*?)<\/a>[^<]*?<\/div>[^<]*?<\/li>/s);
+    //console.log(extcommentli)
+    const extcomment = extcommentli[1].match(/<div class="num adm-num"[^<]*?<a[^<]*?href="([^<]*?)"[^<]*?>([^<]*?)<\/a>[^<]*?<\/div>/s);
     if (extcomment) {
       //console.log('extcomment')
       //console.log(extcomment)
